@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbershop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    .hero{
+        background-image:url("Images/Hero img.jpg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+      
+    .hero{
+        background-image:url("Images/Hero img.jpg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .service-image {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slide-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide-image.active {
+      opacity: 1;
+    }
+
+</style>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Lux<span>Craft</span></div>
+            <div class="nav-buttons">
+                <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="index.html#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Where Style Meets Serenity</h1>
+            <p>All your grooming & beauty needs in one premium destination. Experience the perfect blend of traditional craftsmanship and modern luxury.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-outline">Explore Services</a>
+                <a href="#booking" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Services</h2>
+                <p>Indulge in our range of expertly crafted services designed to enhance your style and wellbeing</p>
+            </div>
+            <div class="services-tabs">
+                <a href="barber.html"><button class="tab-btn" data-category="barbershop">Barbershop</button></a>
+                <a href="spa.html"><button class="tab-btn" data-category="spa">Spa</button></a>
+                <a href="salon.html"><button class="tab-btn" data-category="salon">Salon</button></a>
+            </div>
+            <div class="services-grid">
+                <!-- Salon Services -->
+                <div class="service-card" data-category="salon" data-image="Images/Official cut 3.jpg">
+                    <div class="service-image">
+                        <img src="Images/Official cut.jpg" alt="Official cut" class="slide-image active" loading="lazy">
+                        <img src="Images/Official cut 2.png" alt="Official cut" class="slide-image" loading="lazy">
+                        <img src="Images/Official cut 3.jpg" alt="Official cut" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Classic cut</h3>
+                        <p>Expert Official cut with precision styling and finishing touches</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 1 hr</span>
+                            <span class="service-price">KES 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Beard Trim 3.jpg">
+                    <div class="service-image">
+                        <img src="Images/Beard Trim.jpg" alt="bob curls" class="slide-image active" loading="lazy">
+                        <img src="Images/Beard Trim 2.jpg" alt="bob curls" class="slide-image" loading="lazy">
+                        <img src="Images/Beard Trim 3.jpg" alt="bob curls" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Beard Trim</h3>
+                        <p>Professional beard trim with smooth finish</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Mide Fade 2.jpg">
+                    <div class="service-image">
+                        <img src="Images/Mide Fade.jpg" alt="Mide Fade" class="slide-image active" loading="lazy">
+                        <img src="Images/Mide Fade 2.jpg" alt="Mide Fade" class="slide-image" loading="lazy">
+                        <img src="Images/Mide Fade 3.jpg" alt="Mide Fade" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mid Fade</h3>
+                        <p>Smooth  with precise blending for a sharp, modern look</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Pompadour Cut.jpg">
+                    <div class="service-image">
+                        <img src="Images/Pompadour Cut.jpg" alt="Pompadour cut" class="slide-image active" loading="lazy">
+                        <img src="Images/Pompadour Cut 2.jpg" alt="Pompadour cut" class="slide-image" loading="lazy">
+                        <img src="Images/Pompadour Cu 3.jpg" alt="Pompadour cut" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pompadour Cut</h3>
+                        <p>Iconic high-volume style with  styled bottom</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 1 hr</span>
+                            <span class="service-price">Kes 1000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Undercut.jpg">
+                    <div class="service-image">
+                        <img src="Images/Undercut.jpg" alt="Undercut" class="slide-image active" loading="lazy">
+                        <img src="Images/Undercut 2.jpg" alt="Undercut" class="slide-image" loading="lazy">
+                        <img src="Images/Undercut 3.jpg" alt="Undercut" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Undercut</h3>
+                        <p>Disconnected style with short sides and longer top for versatility</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Buzz Cut.jpg">
+                    <div class="service-image">
+                        <img src="Images/Buzz Cut.jpg" alt="Buzz Cut" class="slide-image active" loading="lazy">
+                        <img src="Images/Buzz Cut 2.jpg" alt="Buzz Cut" class="slide-image" loading="lazy">
+                        <img src="Images/Buzz Cut 3.jpg" alt="Buzz Cut" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Buzz Cut</h3>
+                        <p>Short, clean, low-maintenance style</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Dreadlocks Men 2.jpg">
+                    <div class="service-image">
+                        <img src="Images/Dreadlocks Men.jpg" alt="Dreadlocks" class="slide-image active" loading="lazy">
+                        <img src="Images/Dreadlocks Men 2.jpg" alt="Dreadlocks" class="slide-image" loading="lazy">
+                        <img src="Images/Dreadlocks Men 3.jpg" alt="Dreadlocks" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dreadlocks</h3>
+                        <p>Choppy for  men</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2500</span>
+                        </div>
+                         <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Textured Crop.jpg">
+                    <div class="service-image">
+                        <img src="Images/Textured Crop.jpg" alt="Textured Crop" class="slide-image active" loading="lazy">
+                        <img src="Images/Textured Crop 2.jpg" alt="Textured Crop" class="slide-image" loading="lazy">
+                        <img src="Images/Textured Crop 3.jpg" alt="Textured Crop" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Textured Crop</h3>
+                        <p>Slightly longer top for a classic look</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Box Fade.jpg">
+                    <div class="service-image">
+                        <img src="Images/Box Fade.jpg" alt="Box Fade" class="slide-image active" loading="lazy">
+                        <img src="Images/Box Fade 2.jpg" alt="Box Fade" class="slide-image" loading="lazy">
+                        <img src="Images/Box Fade 3.jpg" alt="Box Fade" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Box Fade</h3>
+                        <p>Elegant style with a defined part and neatly combed top</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Kids Haircuts 2.jpg">
+                    <div class="service-image">
+                        <img src="Images/Kids Haircuts.jpg" alt="Kids" class="slide-image active" loading="lazy">
+                        <img src="Images/Kids Haircuts 2.jpg" alt="Kids" class="slide-image" loading="lazy">
+                        <img src="Images/Kids Haircuts 3.jpg" alt="Kids" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Kids Haircut</h3>
+                        <p>Gradual with a clean finish, ideal for professional settings</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Lower Taper 2.jpg">
+                    <div class="service-image">
+                        <img src="Images/Lower Taper.jpg" alt="Lower Taper" class="slide-image active" loading="lazy">
+                        <img src="Images/Lower Taper 2.jpg" alt="Lower Taper" class="slide-image" loading="lazy">
+                        <img src="Images/Lower Taper 3.jpg" alt="Lower Taper" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Lower Taper</h3>
+                        <p>Professional and clean taper for men</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                  <div class="service-card" data-category="salon" data-image="Images/High Taper 2.jpg">
+                    <div class="service-image">
+                        <img src="Images/High Taper.jpg" alt="High Taper" class="slide-image active" loading="lazy">
+                        <img src="Images/High Taper 2.jpg" alt="High Taper" class="slide-image" loading="lazy">
+                        <img src="Images/High Taper 3.jpg" alt="High Taper" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>High Taper</h3>
+                        <p>High taper gradual with smooth fade</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                  <div class="service-card" data-category="salon" data-image="Images/Bald Cuts.jpg">
+                    <div class="service-image">
+                        <img src="Images/Bald Cuts.jpg" alt="Bald cut" class="slide-image active" loading="lazy">
+                        <img src="Images/Bald Cuts 2.jpg" alt="Bald cut" class="slide-image" loading="lazy">
+                        <img src="Images/Bald Cuts 3.jpg" alt="Bald cut" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Bald Cut</h3>
+                        <p>Choppy black & brown with smooth top</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2500</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                    <div class="service-card" data-category="salon" data-image="Images/Mowhawk.jpg">
+                    <div class="service-image">
+                        <img src="Images/Mowhawk.jpg" alt="Mowhawk" class="slide-image active" loading="lazy">
+                        <img src="Images/Mowhawk 2.jpg" alt="Mowhawk" class="slide-image" loading="lazy">
+                        <img src="Images/Mowhawk 3.jpg" alt="Mowhawk" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Mowhawk</h3>
+                        <p>Short and neat with smooth sides</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="IImages/Occasion Styling 3.jpg">
+                    <div class="service-image">
+                        <img src="Images/Occasion Styling.jpg" alt="Occasion Styling" class="slide-image active" loading="lazy">
+                        <img src="Images/Occasion Styling 2.jpg" alt="Occasion styling" class="slide-image" loading="lazy">
+                        <img src="Images/Occasion Styling 3.jpg" alt="Occasion styling" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Occasion Styling</h3>
+                        <p>Chocolate brown with golden highlights</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 1 hr</span>
+                            <span class="service-price">Kes 1000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+                <div class="service-card" data-category="salon" data-image="Images/Tribal Braids.jpg">
+                    <div class="service-image">
+                        <img src="Images/Curly Hair Fade.jpg" alt="Tribal Braids" class="slide-image active" loading="lazy">
+                        <img src="Images/Curly Hair Fade 2.jpg" alt="Tribal Braids" class="slide-image" loading="lazy">
+                        <img src="Images/Curly Hair Fade 3.jpg" alt="Tribal Braids" class="slide-image" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <h3>Curly Hair Fade</h3>
+                        <p>Black with golden black tribal curls</p>
+                        <div class="service-meta">
+                            <span class="service-duration"><i class="far fa-clock"></i> 2 hr</span>
+                            <span class="service-price">Kes 2000</span>
+                        </div>
+                        <a href="#booking"><button class="btn btn-outline book-service">Book Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Experts</h2>
+                <p>Our talented team of professionals is dedicated to providing you with exceptional service</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Marcus Johnson">
+                    </div>
+                    <div class="team-info">
+                        <h3>Marcus Johnson</h3>
+                        <span class="team-role">Master Barber</span>
+                        <p>With over 15 years of experience, Marcus specializes in classic and modern cuts.</p>
+                        <div class="team-social">
+                                <a href=" https://instagram.com/m_anor_0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://x.com/bitsmanor" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/share/1ZrfUfjogh/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sophia Martinez">
+                    </div>
+                    <div class="team-info">
+                        <h3>Sophia Martinez</h3>
+                        <span class="team-role">Spa Director</span>
+                        <p>Sophia is certified in multiple massage therapies and holistic treatments.</p>
+                        <div class="team-social">
+                            <a href=" https://instagram.com/m_anor_0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/bitsmanor" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/share/1ZrfUfjogh/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Emily Chen">
+                    </div>
+                    <div class="team-info">
+                        <h3>Emily Chen</h3>
+                        <span class="team-role">Color Specialist</span>
+                        <p>Emily is renowned for her creative color techniques and precision cutting.</p>
+                        <div class="team-social">
+                            <a href=" https://instagram.com/m_anor_0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/bitsmanor" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/share/1ZrfUfjogh/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="James Wilson">
+                    </div>
+                    <div class="team-info">
+                        <h3>James Wilson</h3>
+                        <span class="team-role">Grooming Expert</span>
+                        <p>James specializes in beard care and traditional wet shaving techniques.</p>
+                        <div class="team-social">
+                                <a href=" https://instagram.com/m_anor_0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://x.com/bitsmanor" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/share/1ZrfUfjogh/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="section booking" id="booking">
+        <div class="container booking-container">
+            <div class="booking-content">
+                <h2>Book Your Experience</h2>
+                <p>Ready to transform your look and rejuvenate your senses? Book your appointment with our experts today.</p>
+                <ul class="booking-features">
+                    <li><i class="fas fa-check-circle"></i> Easy online booking system</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible appointment times</li>
+                    <li><i class="fas fa-check-circle"></i> Confirmations and reminders</li>
+                    <li><i class="fas fa-check-circle"></i> Secure payment options</li>
+                </ul>
+            </div>
+            <div class="booking-form">
+                <h3>Schedule Appointment</h3>
+                <form action="https://formspree.io/f/manpgnpv" method="POST" id="appointment-form">
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Choose a service</option>
+                            <option value="classic-haircut">Classic Cut - Kes 2000</option>
+                            <option value="classic-haircut">Beard Trim - Kes 2000</option>
+                            <option value="classic-haircut">Mid Fade - Kes 2000</option>
+                            <option value="beard-trim">Pompadour Cut - Kes 1000</option>
+                            <option value="fade-haircut">Undercut - Kes 2000</option>
+                            <option value="pompadour-cut">Buzz Cut - Kes 2000</option>
+                            <option value="undercut">Dreadlocks - Kes 2500</option>
+                            <option value="buzz-cut">Textured Crop - Kes 2000</option>
+                            <option value="textured-crop">Box Fade - Kes 2000</option>
+                            <option value="crew-cut">Kids Haircut - Kes 2000</option>
+                            <option value="side-part">Lower Taper - Kes 2000</option>
+                            <option value="taper-cut">High Taper Cut - Kes 2000</option>
+                            <option value="massage">Bald Cut - Kes 2500</option>
+                            <option value="facial">Mowhawk - Kes 2000</option>
+                            <option value="hair-color">Occasion Cut - Kes 1000</option>
+                            <option value="styling">Curly Hair Styling - Kes 2000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="stylist">Preferred Stylist (optional)</label>
+                        <select id="stylist" name="stylist">
+                            <option value="">No preference</option>
+                            <option value="marcus">Marcus Johnson</option>
+                            <option value="sophia">Sophia Martinez</option>
+                            <option value="emily">Emily Chen</option>
+                            <option value="james">James Wilson</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <div class="footer-col footer-brand">
+                <h3>Lux<span>Craft</span></h3>
+                <p>Where Style Meets Serenity</p>
+                <div class="footer-social">
+                    <a href=" https://instagram.com/m_anor_0" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/bitsmanor" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/share/1ZrfUfjogh/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-col footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Nairobi,Karen 00103</p>
+                <p><i class="fas fa-phone"></i> (+254) 769 610-343 </p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:bitsmanor@gmail.com">bitsmanor@gmail.com</a></p>
+                <p><i class="far fa-clock"></i> Mon-Fri: 9 AM - 7 PM, Sat: 10 AM - 5 PM</p>
+            </div>
+            <div class="footer-col footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+<div class="footer-col footer-map">
+  <h4>Find Us</h4>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.2081676238213!2d36.8219466!3d-1.2920659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d3f9d2e2df%3A0xfdf75e8f4d6c1e2!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1696954760000!5m2!1sen!2ske"
+    width="100%"
+    height="200"
+    style="border:0; border-radius: 8px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 LuxCraft. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Services Image Popup -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img id="modalImage" src="" alt="Service Image">
+        </div>
+    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
